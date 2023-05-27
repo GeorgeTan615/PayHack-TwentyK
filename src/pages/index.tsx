@@ -2,17 +2,18 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import BankActions from '@/components/BankActions'
 import Link from 'next/link'
+// import '../styles/globals.css'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
 	<div className="text-lg">
-		<div className="bg-[#a3bfdb] p-6">
+		<div className="gradient-div p-6">
 			<div className="flex">
-				<img className="w-12 h-12"src="profilepicture.jpg" alt="Profile Picture" />
+				<img className="w-20 h-20 rounded-full"src="profilepicture.jpg" alt="Profile Picture" />
 				<div className="flex flex-col ml-2">
 					<div>Hello,</div>
-					<div className="font-bold">George</div>
+					<div className="font-bold text-2xl">George</div>
 				</div>
 
 			</div>
