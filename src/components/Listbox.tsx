@@ -5,20 +5,20 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 const people = [
   { accountNumber: '2347398364', accountType:'Personal Saver Account' },
   { accountNumber: '5468955356', accountType:'Student Account' },
-  { accountNumber: '7314689426', accountType:'Student Account' },
+  { accountNumber: '7314689426', accountType:'Checking Account' },
 ]
 
 export default function ListBox() {
   const [selected, setSelected] = useState(people[0])
 
   return (
-    <div className="w-72">
+    <div className="w-80">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <div className="block truncate">
-					<div className="font-bold text-md">{selected.accountNumber}</div>
-					<div className="text-xs">{selected.accountType}</div>
+					<div className="font-bold text-xl">{selected.accountNumber}</div>
+					<div className="">{selected.accountType}</div>
 				</div>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
@@ -39,7 +39,7 @@ export default function ListBox() {
                   key={accountIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
+                      active ? 'bg-[#c6e3f7] text-amber-900' : 'text-gray-900'
                     }`
                   }
                   value={account}
@@ -52,7 +52,7 @@ export default function ListBox() {
                         }`}
                       >
                         <div>{account.accountNumber}</div>
-								<div className="text-xs">{account.accountType}</div>
+								<div className="">{account.accountType}</div>
                       </div>
                       {selected ? (
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">

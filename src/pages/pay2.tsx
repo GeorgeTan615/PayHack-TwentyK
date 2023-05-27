@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import ListBox from '@/components/ListBox';
 import Link from 'next/link';
+import {FcBusinessman} from 'react-icons/fc'
 const Pay2 = () => {
 	const router = useRouter();
 	const {amount} = router.query;	
@@ -10,13 +11,18 @@ const Pay2 = () => {
 	}
 	return(
 		<div className="flex flex-col h-screen justify-between p-7">
-			<div>
-				<div className="flex text-3xl mb-4">
-					You're paying&nbsp;<span className="font-bold">RM{amount}</span>
+			<div className="bold text-center text-4xl">QR Pay</div>
+			<div className="flex flex-col justify-center items-center">
+				<FcBusinessman size={100}/>
+				<div className="mt-4 text-2xl">NICHOLAS TAN CHONG ERN</div>
+				<div className="text-lg">1234 567 890</div>
+				<div className="flex text-3xl mt-4 bold">
+					RM{amount}
 				</div>
+				<div className="mt-4" />
 				<ListBox />
-				<div className="mt-4">
-					RM{roundedUpAmount} will be rounded up for insurance.
+				<div className="mt-4 text-xl">
+					RM{roundedUpAmount} will be rounded up for insurance
 				</div>
 
 			</div>

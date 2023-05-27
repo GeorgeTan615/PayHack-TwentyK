@@ -13,7 +13,7 @@ const Pay3 = () => {
 				</IconContext.Provider>
 				{/* <BsCheck2Circle  size={100}/> 66cc99 */}
 				<div className="text-3xl">RM{amount}</div>
-				<div>George Tan Juan Sheng</div>
+				<div>NICHOLAS TAN CHONG ERN</div>
 				<div>RM{roundedUpAmount} will be rounded up for insurance</div>
 
 				<div className="flex justify-between mt-10 w-full">
