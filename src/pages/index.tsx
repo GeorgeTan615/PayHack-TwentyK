@@ -5,6 +5,8 @@ import Link from 'next/link'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+	const data = fetch("http://localhost:3000/transactions")
+	
   return (
 	<div className="text-lg">
 		<div className="gradient-div p-6">
