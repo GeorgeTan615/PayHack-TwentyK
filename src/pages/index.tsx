@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import BankActions from '@/components/BankActions'
 import Link from 'next/link'
-// import '../styles/globals.css'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -10,19 +9,19 @@ export default function Home() {
 	<div className="text-lg">
 		<div className="gradient-div p-6">
 			<div className="flex">
-				<img className="w-20 h-20 rounded-full"src="profilepicture.jpg" alt="Profile Picture" />
-				<div className="flex flex-col ml-2">
+				<img className="w-16 h-16 rounded-full"src="profilepicture.jpg" alt="Profile Picture" />
+				<div className="flex flex-col ml-4">
 					<div>Hello,</div>
-					<div className="font-bold text-2xl">George</div>
+					<div className="bold font-bold text-2xl">George</div>
 				</div>
 
 			</div>
 			<div className="mt-3">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, temporibus magnam. Architecto, temporibus facilis. Quasi assumenda accusantium mollitia odio corrupti ducimus eius quod aut natus minus. A explicabo commodi nobis.
+			Welcome to PayBank, where your financial goals take center stage, backed by cutting-edge technology and expertise.
 			</div>
 		</div>
 		<div className="px-4">
-			<div className="mt-3 font-bold text-lg">Bank Actions</div>
+			<div className="mt-3 text-lg bold">Bank Actions</div>
 			<div className="flex justify-between mt-2 gap-3">
 				<BankActions actionName={"Deposit"} />
 				<BankActions actionName={"Withdraw"} />
