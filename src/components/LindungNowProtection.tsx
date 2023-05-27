@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import CurrentProgress from "./CurrentProgress";
-import MonthyChart from "./MonthyChart";
+import CurrentProgress from "./CurrentBalance";
+import MonthyChart from "./MonthyBalance";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function ChartDashboard({
+export default function LindungNowProtection({
   categoriesNames,
 }: {
   categoriesNames: any;
@@ -22,19 +22,19 @@ export default function ChartDashboard({
   });
 
   return (
-    <div className="absolute bg-teal-500 w-full h-screen mt-[250px]">
+    <div className="absolute bg-[#66cc99] w-full h-max mt-3">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="flex space-x-1 rounded-lg bg-blue-900/20 p-1 h-[60px]">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
+                  "w-full rounded-lg py-2.5 text-xl leading-5 text-blue-700 bold",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
-                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                    : "bg-white/[0.12] text-white hover:bg-white/[0.12] hover:text-white"
                 )
               }
             >

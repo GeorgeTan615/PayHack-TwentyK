@@ -1,86 +1,132 @@
 import { useState } from "react";
 import Toggle from "@/components/Toggle";
-import ChartDashboard from "@/components/ChartDashboard";
+import LindungNowProtection from "@/components/LindungNowProtection";
 
 const ProtectPage = () => {
   const [enabled, setEnabled] = useState(false);
-  const [value, setValue] = useState(50);
+  const [value, setValue] = useState(5);
   const handleSliderChange = (event) => {
     setValue(Number(event.target.value));
   };
 
   return (
     <div className="relative">
-      <div className="flex justify-between pl-8 pr-8 pt-5 mt-5">
-        <div className="text-xl font-medium">Protection</div>
+      <div className="font-bold text-4xl text-center mt-10 bold">
+        Lindung
+        <span className="text-[#2f5597]">Now</span>
+      </div>
+      <div className="flex justify-between pl-10 pr-10 pt-5 mt-5">
+        <div className="text-xl font-medium">
+          Opt into LindungNow Protection
+        </div>
         <Toggle enabled={enabled} setEnabled={setEnabled} />
       </div>
+      <div className="mr-10 ml-10 mt-2 text-gray-500 italic">
+        LindungNow shields you against financial fraud with comprehensive
+        coverage, including reimbursement for losses, legal assistance, identity
+        theft resolution, proactive monitoring, and educational resources. Gain
+        peace of mind and secure your financial well-being with this essential
+        safeguard.
+      </div>
       {enabled ? (
-        <input
-          id="minmax-range"
-          type="range"
-          min="5"
-          max="100"
-          step="5"
-          value={value}
-          onChange={handleSliderChange}
-          className="w-4/5 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 mt-20"
-          disabled
-        />
+        <div className="flex w-100 justify-center">
+          <input
+            id="minmax-range"
+            type="range"
+            min="5"
+            max="100"
+            step="5"
+            value={value}
+            onChange={handleSliderChange}
+            className="w-4/5 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-500 mt-9"
+          />
+          <style jsx>{`
+            input[type="range"]::-webkit-slider-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: #2f5597;
+              cursor: pointer;
+              -webkit-appearance: none;
+              appearance: none;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: #2f5597;
+              cursor: pointer;
+            }
+
+            input[type="range"]::-ms-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: #2f5597;
+              cursor: pointer;
+            }
+          `}</style>
+        </div>
       ) : (
-        <input
-          id="minmax-range"
-          type="range"
-          min="5"
-          max="100"
-          step="5"
-          value={value}
-          onChange={handleSliderChange}
-          className="w-4/5 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 mt-20"
-        />
+        <div className="flex w-100 justify-center">
+          <input
+            id="minmax-range"
+            type="range"
+            min="5"
+            max="100"
+            step="5"
+            value={value}
+            onChange={handleSliderChange}
+            className="w-4/5 h-3 bg-gray-400 rounded-lg appearance-none cursor-pointer mt-9"
+            disabled
+          />
+          <style jsx>{`
+            input[type="range"]::-webkit-slider-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: gray;
+              cursor: pointer;
+              -webkit-appearance: none;
+              appearance: none;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: gray;
+              cursor: pointer;
+            }
+
+            input[type="range"]::-ms-thumb {
+              width: 24px; /* Adjust the width of the thumb */
+              height: 24px; /* Adjust the height of the thumb */
+              border-radius: 50%;
+              background-color: gray;
+              cursor: pointer;
+            }
+          `}</style>
+        </div>
       )}
-      <p className="text-md">Maximum value: {value}</p>
+      {enabled ? (
+        <div className="flex w-100 justify-center p-5">
+          <p className="text-2xl">Maximum value: {value}</p>
+        </div>
+      ) : (
+        <div className="flex w-100 justify-center p-5">
+          <p className="text-2xl text-gray-500">Maximum value: {value}</p>
+        </div>
+      )}
 
       {enabled ? (
-        <ChartDashboard
-          categoriesNames={["Current Progress", "Monthy Progress Chart"]}
+        <LindungNowProtection
+          categoriesNames={["Current Balance", "Monthy Balance"]}
         />
       ) : (
         <div className="hidden"></div>
       )}
-      <style jsx>{`
-        input[type="range"]::-webkit-slider-thumb {
-          width: 24px; /* Adjust the width of the thumb */
-          height: 24px; /* Adjust the height of the thumb */
-          border-radius: 50%;
-          background-color: teal;
-          cursor: pointer;
-          -webkit-appearance: none;
-          appearance: none;
-        }
-
-        input[type="range"]::-moz-range-thumb {
-          width: 24px; /* Adjust the width of the thumb */
-          height: 24px; /* Adjust the height of the thumb */
-          border-radius: 50%;
-          background-color: teal;
-          cursor: pointer;
-        }
-
-        input[type="range"]::-ms-thumb {
-          width: 24px; /* Adjust the width of the thumb */
-          height: 24px; /* Adjust the height of the thumb */
-          border-radius: 50%;
-          background-color: teal;
-          cursor: pointer;
-        }
-      `}</style>
-      <div className="m-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-        suscipit, harum molestiae corporis eum animi alias consequuntur nostrum
-        consectetur voluptas hic recusandae accusamus quibusdam eos enim
-        perferendis dolore, quisquam ipsam.
-      </div>
     </div>
   );
 };
