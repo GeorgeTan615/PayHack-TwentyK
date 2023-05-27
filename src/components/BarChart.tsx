@@ -5,8 +5,7 @@ import {
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
-  Legend,
+  Tooltip
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -16,22 +15,11 @@ ChartJS.register(
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
-  Legend
+  Tooltip
 );
 
 export const options = {
   responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-      labels: {
-        font: {
-          size: 15, // Set the desired font size for legend labels
-        },
-      },
-    },
-  },
   scales: {
     x: {
       ticks: {
@@ -77,5 +65,5 @@ export const data = {
 };
 
 export function BarChart() {
-  return <Bar options={options} data={data} />;
+  return <Bar options={options} data={data} height={302} />;
 }

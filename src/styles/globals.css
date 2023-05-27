@@ -44,3 +44,9 @@ body {
 .bold {
   font-family: 'UniformRoundedBold';
 }
+
+.tube {
+  background-color: #2f5597;
+  width: 200px;
+  height: 25px;
+}

@@ -15,7 +15,7 @@ export default function Home() {
 				<img className="w-16 h-16 rounded-full"src="profilepicture.jpg" alt="Profile Picture" />
 				<div className="flex flex-col ml-4">
 					<div>Hello,</div>
-					<div className="bold font-bold text-2xl">George</div>
+					<div className="bold font-bold text-2xl">George Tan</div>
 				</div>
 
 			</div>
@@ -24,7 +24,7 @@ export default function Home() {
 			</div>
 		</div>
 		<div className="px-4">
-			<div className="mt-3 text-lg bold">Bank Actions</div>
+			<div className="mt-5 text-lg bold">Quick Actions</div>
 			<div className="flex justify-between mt-2 gap-3">
 				<BankActions actionName={"Deposit"} />
 				<BankActions actionName={"Withdraw"} />
@@ -33,7 +33,12 @@ export default function Home() {
 			</div>
 		</div>
 		<div>
-			<img src="banner.png" alt="Mock News" className="h-max pl-2 pr-4 mt-5"/>
+			<div className="px-4 mt-5 text-lg bold">Newest Features</div>
+			<img src="banner.png" alt="Mock News" className="h-max pl-2 pr-4 mt-2"/>
+		</div>
+		<div>
+			<div className="px-4 mt-5 text-lg bold">Spending Summary</div>
+			<img src="banner.png" alt="Mock News" className="h-max pl-2 pr-4 mt-2"/>
 		</div>
 	</div>
   )
