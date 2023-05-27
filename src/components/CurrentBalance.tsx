@@ -23,11 +23,8 @@ export default function CurrentBalance(category: any) {
         <span className="text-black-700 bold text-3xl">RM50.00</span>
         <span className="text-base font-small text-back-700 mr-10">RM100</span>
       </div>
-      <div className="mt-5 mb-10 ml-5 mr-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-        suscipit, harum molestiae corporis eum animi alias consequuntur nostrum
-        consectetur voluptas hic recusandae accusamus quibusdam eos enim
-        perferendis dolore, quisquam ipsam.
+      <div className="mt-5 mb-10 ml-5 mr-5 text-gray-500 italic">
+      Your savings for insurance have a significant impact on your financial well-being. By building a substantial savings balance, you gain control and preparedness, allowing you to afford necessary coverage and providing a safety net for unexpected expenses. This empowers you with peace of mind, knowing that you have the means to protect yourself and navigate any challenges that may arise.
       </div>
     </Tab.Panel>
   );
