@@ -16,8 +16,18 @@
   }
 }
 
+@font-face {
+  font-family: 'UniformRoundedBold';
+  src: url('/fonts/Uniform_Rounded_Bold.otf') format('opentype');
+}
+
+.gradient-div {
+  background: linear-gradient(to bottom, #66cc99, #a1cbb6);
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: 'UniformRoundedBold';
   background: linear-gradient(
       to bottom,
       transparent,
