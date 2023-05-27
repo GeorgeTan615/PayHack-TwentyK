@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import ListBox from '@/components/ListBox';
 import Link from 'next/link';
 import {FcBusinessman} from 'react-icons/fc'
+import { updateUserAmount } from '@/utils'
 const Pay2 = () => {
 	const router = useRouter();
 	const {amount} = router.query;	
@@ -29,9 +30,9 @@ const Pay2 = () => {
 			<Link href={{
 					pathname: '/pay3',
 					query: { amount: amount, roundedUpAmount:roundedUpAmount },
-				}} className="self-center w-full"
+				}} className="self-center w-full" 
 			>
-				<button type="button" className="w-full text-white bg-[#2f5597] hover:bg-[#1b7bbf] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Pay</button>
+				<button type="button" onClick={()=>updateUserAmount("123",roundedUpAmount)} className="w-full text-white bg-[#2f5597] hover:bg-[#1b7bbf] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Pay</button>
 			</Link>
 
 		</div>

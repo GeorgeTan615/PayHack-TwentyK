@@ -2,10 +2,11 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import BankActions from '@/components/BankActions'
 import Link from 'next/link'
+
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-	const data = fetch("http://localhost:3000/transactions")
+	// const data = fetch("http://localhost:3000/transactions")
 	
   return (
 	<div className="text-lg">
@@ -28,14 +29,12 @@ export default function Home() {
 				<BankActions actionName={"Deposit"} />
 				<BankActions actionName={"Withdraw"} />
 				<BankActions actionName={"Transfer"} />
-				<Link href="/lindungnow"><BankActions actionName={"LindungNow"} /></Link>
+				<Link href="/ProtectPage"><BankActions actionName={"LindungNow"} /></Link>
 			</div>
 		</div>
 		<div>
 			<img src="banner.png" alt="Mock News" className="h-max pl-2 pr-4 mt-5"/>
 		</div>
-
-
 	</div>
   )
 }
