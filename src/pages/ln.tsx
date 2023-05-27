@@ -76,10 +76,7 @@ const ProtectPage = () => {
         }
       `}</style>
       <div className="m-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-        suscipit, harum molestiae corporis eum animi alias consequuntur nostrum
-        consectetur voluptas hic recusandae accusamus quibusdam eos enim
-        perferendis dolore, quisquam ipsam.
+      Your savings for insurance have a significant impact on your financial well-being. By building a substantial savings balance, you gain control and preparedness, allowing you to afford necessary coverage and providing a safety net for unexpected expenses. This empowers you with peace of mind, knowing that you have the means to protect yourself and navigate any challenges that may arise.
       </div>
     </div>
   );
