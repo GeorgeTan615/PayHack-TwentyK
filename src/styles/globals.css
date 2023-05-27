@@ -21,17 +21,26 @@
   src: url('/fonts/Uniform_Rounded_Bold.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'UniformRounded';
+  src: url('/fonts/Uniform_Rounded.otf') format('opentype');
+}
+
 .gradient-div {
   background: linear-gradient(to bottom, #66cc99, #a1cbb6);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'UniformRoundedBold';
+  font-family: 'UniformRounded';
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.bold {
+  font-family: 'UniformRoundedBold';
 }
