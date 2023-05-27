@@ -50,15 +50,28 @@ export const options = {
   },
 };
 
-const labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const labels = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 export const data = {
   labels,
   datasets: [
     {
       label: "Monthy Contributions",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 500 })),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
+      backgroundColor: "#2f5597",
     },
   ],
 };
