@@ -2,19 +2,19 @@ import { GiReceiveMoney } from 'react-icons/gi';
 import { GiPayMoney } from 'react-icons/gi';
 import { GiTakeMyMoney } from 'react-icons/gi';
 import { SiSpringsecurity } from 'react-icons/si';
+import Image from 'next/image';
 const BankActions = ({actionName}:{actionName:string}) => {
 	return (
-		<div className="border-2 border-black rounded-md p-3 flex flex-col justify-center items-center w-[115px] h-[110px]">
+		<div className="flex flex-col justify-center items-center">
 			{
 				actionName=="Deposit"
-				? <GiReceiveMoney size={25}/>
+				? <img className="" src="depositlogo.png" alt="Deposit logo"/>
 				: actionName=="Transfer"
-				? <GiPayMoney size={25}/>
+				? <img src="transferlogo.png" alt="Transfer logo"/>
 				:actionName=="Withdraw"
-				? <GiTakeMyMoney size={25}/>
-				: <SiSpringsecurity size={25}/>
+				? <img src="withdrawlogo.png" alt="Withdraw logo"/>
+				: <img src="lindungnowlogo.png" alt="LindungNow logo"/>
 			}
-			{actionName}
 		</div>
 	)
 

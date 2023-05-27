@@ -20,18 +20,18 @@ export default function Home() {
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, temporibus magnam. Architecto, temporibus facilis. Quasi assumenda accusantium mollitia odio corrupti ducimus eius quod aut natus minus. A explicabo commodi nobis.
 			</div>
 		</div>
-		<div className="px-6">
+		<div className="px-4">
 			<div className="mt-3 font-bold text-lg">Bank Actions</div>
-			<div className="flex gap-2 justify-between mt-2">
+			<div className="flex justify-between mt-2 gap-3">
 				<BankActions actionName={"Deposit"} />
 				<BankActions actionName={"Withdraw"} />
 				<BankActions actionName={"Transfer"} />
 				<Link href="/lindungnow"><BankActions actionName={"LindungNow"} /></Link>
 			</div>
 		</div>
-		{/* <div>
-			<img src="mocknews.jpg" alt="Mock News" className="h-max"/>
-		</div> */}
+		<div>
+			<img src="banner.png" alt="Mock News" className="h-max pl-2 pr-4 mt-5"/>
+		</div>
 
 
 	</div>
