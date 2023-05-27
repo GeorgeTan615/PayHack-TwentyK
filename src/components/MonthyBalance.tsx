@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import LineChart from "./LineChart";
 import { BarChart } from "./BarChart";
 
 function classNames(...classes) {
