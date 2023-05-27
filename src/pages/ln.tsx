@@ -38,7 +38,7 @@ const ProtectPage = () => {
             step="5"
             value={value}
             onChange={handleSliderChange}
-            className="w-4/5 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-500 mt-9"
+            className="w-4/5 h-3 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-9"
           />
           <style jsx>{`
             input[type="range"]::-webkit-slider-thumb {
