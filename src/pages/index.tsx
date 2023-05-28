@@ -29,7 +29,7 @@ export default function Home() {
 				<BankActions actionName={"Deposit"} />
 				<BankActions actionName={"Withdraw"} />
 				<BankActions actionName={"Transfer"} />
-				<Link href="/ProtectPage"><BankActions actionName={"LindungNow"} /></Link>
+				<Link href="/qr"><BankActions actionName={"QRPay"} /></Link>
 			</div>
 		</div>
 		<div>

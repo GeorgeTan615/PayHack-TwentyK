@@ -16,6 +16,6 @@ export const updateUserAmount = async (userId:string,amount:number
 export const fetchUser = async (userId:string) => {
 	const response = await fetch(`${baseUrl}/api/user/${userId}`);
 	const data = await response.json();
-	// console.log(data)
+	console.log(data)
 	return data;
 };
