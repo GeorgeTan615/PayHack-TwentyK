@@ -40,20 +40,23 @@ export default function Home() {
       </div>
       <div>
         <div className="px-4 mt-5 text-lg bold">Newest Features</div>
-        <img
-          src="banner.png"
-          alt="Mock News"
-          className="h-max pl-2 pr-4 mt-2"
-        />
+			<Link href="/ln">
+				<img
+					
+					src="banner.png"
+					alt="Mock News"
+					className="h-max pl-2 pr-4 mt-2"
+				/>
+			</Link>
       </div>
-      <div>
+      {/* <div>
         <div className="px-4 mt-5 text-lg bold">Spending Summary</div>
         <img
           src="banner.png"
           alt="Mock News"
           className="h-max pl-2 pr-4 mt-2"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
