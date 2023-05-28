@@ -58,7 +58,7 @@ function WebcamComponent(): JSX.Element {
 					}, 1000);
 					setTimeout(() => {
 						window.location.reload();
-					}, 1300)
+					}, 2000)
 				 };
 			  
 				 // Call the function to initiate the delay and rerouting
