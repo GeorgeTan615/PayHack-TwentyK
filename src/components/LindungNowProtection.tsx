@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import CurrentProgress from "./CurrentBalance";
+import CurrentBalance from "./CurrentBalance";
 import MonthyChart from "./MonthyBalance";
 
 function classNames(...classes) {
@@ -45,7 +45,7 @@ export default function LindungNowProtection({
         <Tab.Panels className="mt-2">
           {Object.keys(categories).map((category) =>
             category === categoriesNames[0] ? (
-              <CurrentProgress category={category} />
+              <CurrentBalance category={category} />
             ) : (
               <MonthyChart />
             )

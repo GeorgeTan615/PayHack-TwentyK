@@ -13,5 +13,7 @@ datasource db {
 }
 model User{
   id      String @id @default(cuid())
-  amount  Float 
+  amount  Float
+  toggled Boolean @default(false)
+  slider  Int     @default(5)
 }

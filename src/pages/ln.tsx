@@ -1,16 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Toggle from "@/components/Toggle";
 import LindungNowProtection from "@/components/LindungNowProtection";
+import { IoChevronBack } from "react-icons/io5";
+import Link from "next/link";
+import { updateUserValue } from "@/utils";
+import { fetchUser } from "@/utils";
 
 const ProtectPage = () => {
   const [enabled, setEnabled] = useState(false);
   const [value, setValue] = useState(5);
-  const handleSliderChange = (event) => {
+  const [amount, setAmount] = useState(0);
+
+  const handleSliderChange = (event: any) => {
     setValue(Number(event.target.value));
+    // Store values into local storage
+    localStorage.setItem("value", value.toString());
   };
+
+  useEffect(() => {
+    const storedEnabled = localStorage.getItem("enable");
+    const storedValue = localStorage.getItem("value");
+    if (storedEnabled) {
+      const isTrueSet = storedEnabled === "true";
+      setEnabled(isTrueSet);
+    }
+    if (storedValue) {
+      setValue(parseInt(storedValue));
+      if (parseInt(storedValue) < value) {
+        setValue(parseInt(storedValue) - 5);
+      } else if (parseInt(storedValue) > value) {
+        setValue(parseInt(storedValue) + 5);
+      }
+    }
+  }, []);
 
   return (
     <div className="relative">
+      <Link href="/">
+        <IoChevronBack className="absolute ml-[30px]" size={40} />
+      </Link>
       <div className="font-bold text-4xl text-center mt-10 bold">
         Lindung
         <span className="text-[#2f5597]">Now</span>
