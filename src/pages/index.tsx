@@ -27,31 +27,27 @@ export default function Home() {
           <BankActions actionName={"Deposit"} />
           <BankActions actionName={"Withdraw"} />
           <BankActions actionName={"Transfer"} />
-          <Link href="/ln">
-            <BankActions actionName={"QR"} />
+          <Link href="/qr">
+            <BankActions actionName={"QRPay"} />
           </Link>
         </div>
       </div>
       <div>
         <div className="px-4 mt-5 text-lg bold">Newest Features</div>
-        <Link href="/ln">
-          <img
-            src="banner.png"
-            alt="Mock News"
-            className="h-max pl-2 pr-4 mt-2"
-          />
-        </Link>
+        <img
+          src="banner.png"
+          alt="Mock News"
+          className="h-max pl-2 pr-4 mt-2"
+        />
       </div>
-      {/* <div>
+      <div>
         <div className="px-4 mt-5 text-lg bold">Spending Summary</div>
-        <Link href="/ln">
-          <img
-            src="banner.png"
-            alt="Mock News"
-            className="h-max pl-2 pr-4 mt-2"
-          />
-        </Link>
-      </div> */}
+        <img
+          src="banner.png"
+          alt="Mock News"
+          className="h-max pl-2 pr-4 mt-2"
+        />
+      </div>
     </div>
   );
 }

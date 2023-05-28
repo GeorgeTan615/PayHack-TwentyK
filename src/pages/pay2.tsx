@@ -11,7 +11,7 @@ const Pay2 = () => {
 		roundedUpAmount = parseFloat((Math.ceil(parseFloat(amount))-parseFloat(amount)).toFixed(2))
 	}
 	return(
-		<div className="flex flex-col h-screen justify-between p-7">
+		<div className="flex flex-col h-screen justify-between p-7 pt-16">
 			<div className="bold text-center text-4xl">QR Pay</div>
 			<div className="flex flex-col justify-center items-center">
 				<FcBusinessman size={100}/>
